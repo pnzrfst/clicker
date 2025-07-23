@@ -8,9 +8,7 @@ const stats = {
 
 let coins = 0;
 
-
 ////// aumenta as coins baseado no true e na qtd que o booster fornece
-
 
 function growCoinsPerClick(isActive, booster){
     if(isActive == true){
@@ -21,7 +19,6 @@ function growCoinsPerClick(isActive, booster){
     }
 }
 
-
 ///////////////captura o clique, aumenta o coin e mostra na tela
 document.getElementById("main-button").addEventListener("click", ()=>{
     coins++;
@@ -30,7 +27,6 @@ document.getElementById("main-button").addEventListener("click", ()=>{
     stats.earnedCoins++;
     qtdClicks.innerText = coins;
 });
-
 
 /////////////////// coleta coins automaticamente
 
@@ -46,6 +42,3 @@ function collectCoinsAutomatically(isActve){
        return intervalID;
     }
 }
-
-
-
