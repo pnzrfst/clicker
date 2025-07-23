@@ -8,17 +8,17 @@ const stats = {
 };
 
 // aumenta as coins baseado no true e na qtd que o booster fornece
-function growCoinsPerClick(isActive, booster) {
-    if (isActive) {
+function growCoinsPerClick(isActive, booster){
+    if(isActive == true){
         const multipleCoins = coins * booster;
         stats.earnedCoins++;
-    } else {
+    }else{
         return coins;
     }
 }
 
 // captura o clique, aumenta o coin e mostra na tela
-document.getElementById("main-button").addEventListener("click", () => {
+document.getElementById("main-button").addEventListener("click", ()=>{
     coins++;
     clicksQuantity++;
 
@@ -30,7 +30,7 @@ document.getElementById("main-button").addEventListener("click", () => {
 });
 
 // coleta coins automaticamente
-function collectCoinsAutomatically(isActive) {
+function collectCoinsAutomatically(isActive){
     if (!isActive) return
 
     setInterval(() => {
