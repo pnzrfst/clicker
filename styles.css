@@ -1,20 +1,78 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Pixel;
 }
 
-
-header{
-    width: 100vw;
+@font-face {
+  font-family: "Pixel";
+  src: url("Fontes/FontePixelada.ttf");
 }
 
-#menu{
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    padding: 2.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+body {
+  height: 90vh;
+  width: 100vw;
+  background-image: url(Imagens/fundo.jpg);
+  background-size: contain;
+  background-position: center;
+  overflow-y: hidden;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 100vw;
+  background-image: linear-gradient(to top, orange, darkorange);
+  color: black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.imagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  display: inline-block;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 190),
+    yellow,
+    goldenrod
+  );
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  border: 2px solid black;
+  margin: 50px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  height: 80px;
+  width: 400px;
+  padding: 15px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 190),
+    yellow,
+    goldenrod
+  );
+  cursor: pointer;
+  font-size: 26px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  border: 3px solid black;
+}
