@@ -7,19 +7,23 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <ul id="menu">
-          <li>Cliques : <span id="cliques">0</span></li>
-          <li id="melhorias">Melhorias:</li>
-          <li id="estatisticas">Estatísticas:</li>
-        </ul>
+      <div id="menu">
+        <div class="menu-button">Cliques:
+          <span id="cliques">0</span></div>
+        <button id="melhorias" class="menu-button">Melhorias</button>
+        <button id="estatisticas" class="menu-button">Estatísticas</button>
       </div>
     </header>
-    <div class="imagem">
-      <img src="Imagens/MoedaGiratoria.webp" alt="moeda" height="200" width="200px">
-    </div>
     <div class="content">
       <section id="box-button">
+        <div class="coin">
+          <img
+            src="Imagens/MoedaGiratoria.webp"
+            alt="moeda"
+            height="150px"
+            width="150px"
+          />
+        </div>
         <button id="main-button">Gerar Moedas</button>
       </section>
     </div>
