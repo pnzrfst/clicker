@@ -1,6 +1,9 @@
 let clicksQuantity = 0;
 let coins = 0;
 
+let comboQuantity = 0;
+let comboTimer;
+
 const stats = {
     clicksQuantity : 0,
     earnedCoins : 0,
@@ -17,6 +20,19 @@ function growCoinsPerClick(isActive, booster) {
     }
 }
 
+function updateComboUI() {
+    const comboElement = document.getElementById("combo")
+
+    if (!comboQuantity) return comboElement.innerText = ""
+
+    comboElement.innerText = `x${comboQuantity}`
+}
+
+function resetCombo() {
+    comboQuantity = 0
+    updateComboUI()
+}
+
 // captura o clique, aumenta o coin e mostra na tela
 document.getElementById("main-button").addEventListener("click", () => {
     coins++;
@@ -27,6 +43,14 @@ document.getElementById("main-button").addEventListener("click", () => {
 
     const qtdClicks = document.getElementById("cliques");
     qtdClicks.innerText = clicksQuantity;
+
+    comboQuantity++
+    updateComboUI()
+
+    clearTimeout(comboTimer)
+    comboTimer = setTimeout(() => {
+        resetCombo()
+    }, 500)
 });
 
 // coleta coins automaticamente
