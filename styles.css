@@ -93,7 +93,16 @@ header #menu {
   }
 }
 
+#combo {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 2em;
+  transform: rotate(35deg);
+}
+
 .content {
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
