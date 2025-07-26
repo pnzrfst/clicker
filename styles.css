@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "Pixel";
-  src: url("Fontes/FontePixelada.ttf");
+  src: url("Fontes/Pixel\ Emulator.otf");
 }
 
 body {
@@ -20,43 +20,44 @@ body {
 }
 
 header {
-  height: 90px;
+  height: 100px;
   max-width: 100vw;
-  background-color: rgb(255, 136, 0);
-  color: black;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  border: 3px solid black;
+  background-image: url(Imagens/pixel-art-de-dinheiro-voando_738810-22.avif);
+  background-position: center center;
+  background-size: contain;
+  border-bottom: 3px solid black;
+  border-radius: 5px;
 }
 
 header #menu {
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 150px;
 }
 
 .menu-button {
-  display: inline-block;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(255, 255, 160),
-    yellow,
-    goldenrod
-  );
+  background-image: url(Imagens/36056324-ai-gerado-uma-amarelo-parede-com-uma-brilhante-luz-foto.jpg);
+  background-position: center center;
+  background-size: cover;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  border: 3px solid black;
-  padding: 15px;
+  border: 2px solid black;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 14px;
   cursor: pointer;
-  width: 200px;
+  width: 150px;
   height: 50px;
   text-align: center;
+  border-radius: 5px;
+  color: black;
 }
 
 .coin {
   position: absolute;
-  top: -150px;
-  right: 34%;
+  top: -250px;
+  right: -70px;
+  user-select: none;
 }
 
 .moeda {
@@ -104,26 +105,24 @@ header #menu {
 }
 
 button#main-button {
-  height: 70px;
-  width: 400px;
-  border-radius: 20px;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(255, 255, 160),
-    yellow,
-    goldenrod
-  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0px;
+  width: 0px;
   cursor: pointer;
-  font-size: 26px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-  border: 3px solid black;
-  margin: 50px;
+}
+
+#buttonCoin {
+  position: relative;
+  height: 200px;
+  user-select: none;
 }
 
 button#main-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-10px);
 }
 
 .menu-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
